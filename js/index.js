@@ -8,6 +8,7 @@ class Produto {
     }
 
     salvar(){
+        
         let produto = this.lerDados();
         this.validaCampos(produto)
         if(this.validaCampos(produto)){
