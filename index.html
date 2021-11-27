@@ -32,12 +32,12 @@
                 <input type="text" id="produto" placeholder="Nome do produto">
             </div>
             <div class="lineInput">
-                <label>Valor</label>
-                <input type="text" id="valor" placeholder="Valor do produto">
+                <label>Preço</label>
+                <input type="text" id="preço" placeholder="Valor do produto">
 
             </div>
-            <button onclick="produto.adicionar()">Adicionar</button>
-            <button onclick="produto.excluir()">Deletar</button>
+            <button onclick="produto.salvar()">Salvar</button>
+            <button onclick="produto.cancelar()">Cancelar</button>
         </div>
 
         <div class="content"></div>
@@ -48,18 +48,10 @@
                     <th >Valor</th>
                     <th >Ações</th>
                 </thead>
-                <tbody>
-                    <tr>
+                <tbody id="tbody"> 
                         <td class="center">1</td>
                         <td>Mesa sala de estar</td>
-                        <td>
-                            <img src="img/edit/baseline_delete_black_24dp.png" alt="">
-                            <img src="img/edit/outline_edit_black_24dp.png" alt="">
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="center">1</td>
-                        <td>Mesa sala de estar</td>
+                        <td>1900</td>
                         <td>
                             <img src="img/edit/baseline_delete_black_24dp.png" alt="">
                             <img src="img/edit/outline_edit_black_24dp.png" alt="">
