@@ -36,13 +36,18 @@ class Produto {
 
             let imgEdit = document.createElement('img');
             let imgDelete = document.createElement('img')
-            imgEdit.src = "img/baseline_delete_black_24dp.png"
-            imgDelete.src = 'img/outline_edit_black_24dp.png'
+            imgEdit.src = "img/outline_edit_black_24dp.png"
             
+        
+            imgDelete.src = "img/baseline_delete_black_24dp.png"
+            imgDelete.setAttribute("onclick", "produto.deletar("+ this.arrayProdutos[i].id +")")
+         
 
 
             td_acoes.appendChild(imgEdit)
             td_acoes.appendChild(imgDelete)
+
+            console.log(this.arrayProdutos)
 
         }
 
@@ -87,6 +92,15 @@ class Produto {
         
 
 
+    }
+    deletar(id){
+
+        let tbody = document.getElementById('tbody')
+        for(let i = 0; i < this.arrayProdutos.length; i++){
+            if(this.arrayProdutos[i].id == id)
+                this.arrayProdutos.splice(i, 1)
+                tbody.deleteRow(i)
+        }
     }
 
 }
