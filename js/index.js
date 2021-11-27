@@ -56,7 +56,7 @@ class Produto {
 
             console.log(this.arrayProdutos)
 
-        }
+        }//
 
 
     }
